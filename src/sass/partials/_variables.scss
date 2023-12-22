@@ -1,0 +1,17 @@
+$headings: "Karla", sans-serif;
+$text: "Inter", sans-serif;
+
+$colors: (
+  "background": #f5f7fb,
+  "textDark": #293264,
+  "textLight": #f5f7fb,
+  "buttons": #4d5b9e,
+  "highlightDefault": #d6dbf5,
+  "highlightCorrect": #94d7a2,
+  "highlightWrong": #f8bcbc,
+  "borders": #dbdef0,
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}

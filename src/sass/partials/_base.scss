@@ -1,0 +1,90 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: getColor("background");
+  color: getColor("textDark");
+  font-family: $text;
+}
+
+h1,
+h2 {
+  font-family: $headings;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.375rem;
+  text-align: left;
+}
+
+.btn {
+  font-family: $text;
+  font-size: 1rem;
+  background-color: getColor("buttons");
+  color: getColor("textLight");
+  border: none;
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(getColor("buttons"), 10%);
+  }
+}
+
+.quiz-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid getColor("borders");
+  padding-bottom: 2rem;
+}
+
+.answer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.radio-btn-input {
+  display: none;
+}
+
+.custom-radio-btn {
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid getColor("buttons");
+}
+
+.radio-btn-input:checked + .custom-radio-btn {
+  background-color: getColor("highlightDefault");
+  border: none;
+}
